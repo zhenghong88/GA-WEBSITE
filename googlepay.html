@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Pay Transaction History</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .transaction-item {
+            font-size: 1.2rem;
+            border-bottom: 1px solid #dee2e6;
+            padding: 0.5rem 0;
+        }
+        .transaction-item:last-child {
+            border-bottom: none;
+        }
+        .transaction-status {
+            font-size: 0.9rem;
+        }
+        .summary {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .summary-item {
+            margin-bottom: 10px;
+        }
+        .list-group-item:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Google Pay Transaction History</h1>
+    </header>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between mb-4">
+            <button class="btn btn-secondary" onclick="location.href='home.html'">Home</button>
+            <button class="btn btn-danger" onclick="location.href='logout.html'">Logout</button>
+        </div>
+        <div class="summary text-center">
+            <div class="summary-item">Total Inflow: $500</div>
+            <div class="summary-item">Total Outflow: $300</div>
+            <div class="summary-item">Balance: $200</div>
+        </div>
+        <h2 class="text-center mb-5">Transaction History</h2>
+        <div class="list-group">
+            <div class="list-group-item transaction-item d-flex justify-content-between align-items-center" onclick="showTransactionDetails('1')">
+                <span><i class="fas fa-arrow-up text-danger"></i> Transfer to XYZ: $100</span>
+                <span class="transaction-status text-success">Completed</span>
+            </div>
+            <div class="list-group-item transaction-item d-flex justify-content-between align-items-center" onclick="showTransactionDetails('2')">
+                <span><i class="fas fa-arrow-down text-success"></i> Receive from ABC: $50</span>
+                <span class="transaction-status text-success">Completed</span>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2024 All in One Finance. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showTransactionDetails(transactionId) {
+            alert(`Showing details for transaction ${transactionId}`);
+            // Implement detailed view logic here
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All in One Finance</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .footer-text {
+            font-size: 0.75rem;
+        }
+        .scrollable {
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .wallet-card {
+            border: none;
+            background: #f8f9fa;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+        }
+        .wallet-card img {
+            width: 50px;
+            height: 50px;
+        }
+        .wallet-card h3 {
+            font-size: 1.25rem;
+            margin-top: 0.5rem;
+        }
+        .wallet-card p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .wallet-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .wallet-card a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3 position-relative">
+        <a href="index.html" class="logout-icon position-absolute"><i class="fas fa-sign-out-alt"></i></a>
+        <h1>All in One Finance</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">All in One Finance</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showHome()">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showServices()">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div id="home" class="content">
+            <div class="hero bg-info text-white text-center py-5 rounded">
+                <h1>The All in One Financial Platform</h1>
+                <p>We believe in Minimalism. Less is More.</p>
+                <button class="btn btn-light btn-lg" onclick="showLogin()">Login using E-KYC</button>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="service1.jpg" class="card-img-top" alt="Banking Service">
+                        <div class="card-body">
+                            <h5 class="card-title">Banking Service</h5>
+                            <p class="card-text">We offer a wide range of banking services to meet your financial needs.</p>
+                            <button class="btn btn-info" onclick="showServiceDetails('banking')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="service2.jpg" class="card-img-top" alt="Client Testimonials">
+                        <div class="card-body">
+                            <h5 class="card-title">Client Testimonials</h5>
+                            <p class="card-text">Our clients love us! Read what they have to say about our services.</p>
+                            <button class="btn btn-info" onclick="showServiceDetails('testimonials')">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Our Services</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check-circle text-primary"></i> Banking Services</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Investment Management</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Budgeting Tools</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Loan Management</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Credit Monitoring</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Insurance Services</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Tax Services</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Financial Planning</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Payment Solutions</li>
+                                <li><i class="fas fa-check-circle text-primary"></i> Customer Support</li>
+                            </ul>
+                            <button class="btn btn-info" onclick="showServices()">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="login" class="content" style="display:none;">
+            <div class="row justify-content-center my-5">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header text-center">Login</div>
+                        <div class="card-body">
+                            <form onsubmit="event.preventDefault(); showDashboard();">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" id="username" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" id="password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            </form>
+                            <hr>
+                            <button class="btn btn-secondary btn-block" onclick="window.location.href='https://www.singpass.gov.sg'">Login with SingPass</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="services" class="content" style="display:none;">
+            <div class="card mx-auto" style="max-width: 800px;">
+                <div class="card-body">
+                    <h2 class="card-title text-center my-5">Our Services</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Banking Services</h5>
+                                    <p class="card-text">We offer a full suite of banking services including checking and savings accounts, online banking, and mobile banking apps. Our secure and user-friendly platform ensures that you have access to your finances anytime, anywhere.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('banking')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Investment Management</h5>
+                                    <p class="card-text">Our expert financial advisors provide personalized investment strategies to help you grow your wealth. We offer a range of investment options including stocks, bonds, mutual funds, and retirement accounts.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('investment')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Budgeting Tools</h5>
+                                    <p class="card-text">Our comprehensive budgeting tools help you track your expenses, set savings goals, and manage your financial health. Get insights into your spending habits and make informed decisions to improve your financial stability.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('budgeting')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Loan Management</h5>
+                                    <p class="card-text">We provide loan management services for personal loans, home loans, auto loans, and more. Our team helps you find the best loan options, manage your payments, and keep your debt under control.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('loan')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Credit Monitoring</h5>
+                                    <p class="card-text">Stay on top of your credit score with our credit monitoring services. Receive alerts about changes to your credit report, track your credit health, and get tips on how to improve your credit score.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('credit')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Insurance Services</h5>
+                                    <p class="card-text">Protect yourself and your family with our comprehensive insurance services. We offer health insurance, life insurance, auto insurance, and home insurance plans tailored to meet your needs and budget.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('insurance')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tax Services</h5>
+                                    <p class="card-text">Our tax services ensure that you are always compliant with the latest tax laws. We provide tax planning, preparation, and filing services to help you minimize your tax liability and maximize your returns.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('tax')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Financial Planning</h5>
+                                    <p class="card-text">Our financial planners work with you to create a personalized financial plan that aligns with your goals. Whether you're saving for retirement, planning for education, or managing your estate, we provide expert advice and support every step of the way.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('financial-planning')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Payment Solutions</h5>
+                                    <p class="card-text">We offer a variety of payment solutions including digital wallets, mobile payments, and international money transfers. Our secure and convenient payment methods ensure that your transactions are fast and hassle-free.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('payment')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title">Customer Support</h5>
+                                    <p class="card-text">Our dedicated customer support team is here to help you with all your financial needs. Whether you have a question about your account, need technical assistance, or want to learn more about our services, we're just a call or click away.</p>
+                                    <button class="btn btn-info btn-block" onclick="showServiceDetails('support')">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="index.html" class="btn btn-dark btn-lg">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dashboard" class="content" style="display:none;">
+            <h2 class="text-center my-5">Digital Wallets</h2>
+            <div class="row scrollable">
+                <div class="col-md-4 mb-4">
+                    <div class="card wallet-card text-center shadow-sm">
+                        <img src="googlepay.png" alt="Google Pay" class="img-fluid mx-auto d-block mt-3">
+                        <h3>Google Pay</h3>
+                        <p>GOOGLEPAY 9167<br><a href="googlepay.html">CLICK TO VIEW MORE</a></p>
+                        <h4>Transaction History</h4>
+                        <p>Transfer to XYZ: $100 - Completed</p>
+                        <p>Receive from ABC: $50 - Completed</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card wallet-card text-center shadow-sm">
+                        <img src="applepay.png" alt="Apple Pay" class="img-fluid mx-auto d-block mt-3">
+                        <h3>Apple Pay Wallet</h3>
+                        <p>Balance: $9890<br>Auto top-up</p>
+                        <h4>Transaction History</h4>
+                        <p>From applepay 1284 to tieguanyin $100 - Completed</p>
+                        <p>From applepay 1284 to grabfood $9 - Completed</p>
+                        <p>From zhenghong to applepay 1284 $9999 - Completed</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card wallet-card text-center shadow-sm">
+                        <img src="meremitpay.png" alt="Meremit Pay" class="img-fluid mx-auto d-block mt-3">
+                        <h3>Meremit Pay</h3>
+                        <p>MEREMITPAY 1835<br><a href="#" onclick="showMeremitHistory()">CLICK TO VIEW MORE</a></p>
+                        <h4>Transaction History</h4>
+                        <p>Transfer to XYZ: $100 - Completed</p>
+                        <p>Receive from ABC: $50 - Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="meremit-history" class="content" style="display:none;">
+            <h2 class="text-center my-5">Meremit Transaction History</h2>
+            <ul class="list-unstyled">
+                <li>Transfer to XYZ: $200 - Completed</li>
+                <li>Receive from DEF: $150 - Completed</li>
+                <!-- Add more transactions here -->
+            </ul>
+            <div class="text-center">
+                <a href="home.html" class="btn btn-primary">Home</a>
+                <a href="logout.html" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-2 footer-text">
+        &copy; 2024 All in One Finance. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        function showHome() {
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('services').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'none';
+            document.getElementById('meremit-history').style.display = 'none';
+        }
+
+        function showLogin() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('login').style.display = 'block';
+            document.getElementById('services').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'none';
+            document.getElementById('meremit-history').style.display = 'none';
+        }
+
+        function showServices() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('services').style.display = 'block';
+            document.getElementById('dashboard').style.display = 'none';
+            document.getElementById('meremit-history').style.display = 'none';
+        }
+
+        function showServiceDetails(service) {
+            alert(`More details about ${service} coming soon!`);
+        }
+
+        function showDashboard() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('services').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+            document.getElementById('meremit-history').style.display = 'none';
+        }
+
+        function showMeremitHistory() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('login').style.display = 'none';
+            document.getElementById('services').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'none';
+            document.getElementById('meremit-history').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

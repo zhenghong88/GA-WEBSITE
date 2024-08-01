@@ -1,0 +1,85 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    background-color: #007bff; /* Change this to match the integrated style */
+}
+
+.logout-icon {
+    top: 15px;
+    left: 15px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.logout-icon:hover {
+    color: #d4d4d4;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #d9230f;
+    border-color: #d9230f;
+}
+
+.btn-primary:hover {
+    background-color: #a61e0c;
+    border-color: #a61e0c;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}

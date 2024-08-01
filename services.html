@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - All in One Finance</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3 position-relative">
+        <a href="index.html" class="logout-icon position-absolute"><i class="fas fa-sign-out-alt"></i></a>
+        <h1>All in One Finance</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">All in One Finance</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="card mx-auto" style="max-width: 800px;">
+            <div class="card-body">
+                <h2 class="card-title text-center my-5">Our Services</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Banking Services</h5>
+                                <p class="card-text">We offer a full suite of banking services including checking and savings accounts, online banking, and mobile banking apps. Our secure and user-friendly platform ensures that you have access to your finances anytime, anywhere.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('banking')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Investment Management</h5>
+                                <p class="card-text">Our expert financial advisors provide personalized investment strategies to help you grow your wealth. We offer a range of investment options including stocks, bonds, mutual funds, and retirement accounts.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('investment')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Budgeting Tools</h5>
+                                <p class="card-text">Our comprehensive budgeting tools help you track your expenses, set savings goals, and manage your financial health. Get insights into your spending habits and make informed decisions to improve your financial stability.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('budgeting')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Loan Management</h5>
+                                <p class="card-text">We provide loan management services for personal loans, home loans, auto loans, and more. Our team helps you find the best loan options, manage your payments, and keep your debt under control.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('loan')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Credit Monitoring</h5>
+                                <p class="card-text">Stay on top of your credit score with our credit monitoring services. Receive alerts about changes to your credit report, track your credit health, and get tips on how to improve your credit score.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('credit')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Insurance Services</h5>
+                                <p class="card-text">Protect yourself and your family with our comprehensive insurance services. We offer health insurance, life insurance, auto insurance, and home insurance plans tailored to meet your needs and budget.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('insurance')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Tax Services</h5>
+                                <p class="card-text">Our tax services ensure that you are always compliant with the latest tax laws. We provide tax planning, preparation, and filing services to help you minimize your tax liability and maximize your returns.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('tax')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Financial Planning</h5>
+                                <p class="card-text">Our financial planners work with you to create a personalized financial plan that aligns with your goals. Whether you're saving for retirement, planning for education, or managing your estate, we provide expert advice and support every step of the way.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('financial-planning')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Payment Solutions</h5>
+                                <p class="card-text">We offer a variety of payment solutions including digital wallets, mobile payments, and international money transfers. Our secure and convenient payment methods ensure that your transactions are fast and hassle-free.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('payment')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title">Customer Support</h5>
+                                <p class="card-text">Our dedicated customer support team is here to help you with all your financial needs. Whether you have a question about your account, need technical assistance, or want to learn more about our services, we're just a call or click away.</p>
+                                <button class="btn btn-info btn-block" onclick="showServiceDetails('support')">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3 mt-1">
+        &copy; 2024 All in One Finance. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        function showServiceDetails(service) {
+            alert(`More details about ${service} coming soon!`);
+        }
+    </script>
+</body>
+</html>

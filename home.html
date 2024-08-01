@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - All in One Finance</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Reset body margin and padding */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: #007bff;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-title {
+            margin-top: 1rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .content {
+            flex: 1;
+        }
+        .footer-text {
+            font-size: 0.75rem;
+        }
+        body, html {
+            height: 100%;
+        }
+        .container-fluid {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column">
+        <header class="bg-dark text-white text-center py-3 position-relative">
+            <h1>Welcome to All in One Finance</h1>
+            <a href="logout.html" class="logout-icon position-absolute" style="right: 20px; top: 20px;"><i class="fas fa-sign-out-alt"></i></a>
+        </header>
+        <div class="main-content container mt-5">
+            <h2 class="text-center my-5">My Transactions</h2>
+            <p class="text-center mb-4">This is the home page. You can navigate to different sections from here.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fab fa-google-pay card-icon"></i>
+                            <h5 class="card-title">Google Pay</h5>
+                            <p class="card-text">View your Google Pay transaction history.</p>
+                            <a href="googlepay.html" class="btn btn-primary btn-block">View Transactions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fab fa-apple-pay card-icon"></i>
+                            <h5 class="card-title">Apple Pay</h5>
+                            <p class="card-text">View your Apple Pay transaction history.</p>
+                            <a href="applepay.html" class="btn btn-primary btn-block">View Transactions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <i class="fas fa-wallet card-icon"></i>
+                            <h5 class="card-title">Meremit Pay</h5>
+                            <p class="card-text">View your Meremit Pay transaction history.</p>
+                            <a href="meremit.html" class="btn btn-primary btn-block">View Transactions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="logout.html" class="btn btn-danger btn-lg">Logout</a>
+            </div>
+        </div>
+        <footer class="bg-dark text-white text-center py-3 footer-text mt-auto">
+            &copy; 2024 All in One Finance. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
